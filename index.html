@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+    </br>
+        <form class="row g-3" id="search-form">     
+          </div>
+          <div class="col-auto">
+            <input id="search" type="text" class="form-control" id="change-city" placeholder="Search for your location">
+          </div>
+          <div class="col-5" id="current">
+            <button type="submit" class="btn btn-primary mb-3" id="change">Search</button>
+            <button class="btn btn-secondary mb-3" id="currentSpot">Current📍</button>
+          </div>
+      
+
+
+        <div class="col-4 g-0">
+          <span class="degrees"
+            ><button class="celsius">°C</button><button class="fahrenheit"> °F</button></span>       
+        </div>
+      </form>
+      
+      <h1 id="city" class="city">
+        Berlin
+      </h1>
+      <h2>
+        <p id="datetime">Monday, September 5th, 17:37</p>
+    </br>
+      </h2>
+    </header>
+    <section class="temperature">
+        <span id="current-temp">
+        -° 
+      </span>
+        <br />
+        <span class="description">
+        </span>
+    
+    </section>
+    
+<div class="forecast">This Upcoming Week</div>
+  </br>
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+          <span class="Days">
+        Monday
+          </span>
+      </br>
+      <i class="fa-solid fa-snowflake fa-2xl"></i>
+      <span class="weather">
+          Snowing
+      </div>
+      <div class="col">
+          <span class="Days">
+        Tuesday
+      </span>
+      </br>
+        <i class="fa-solid fa-snowflake fa-2xl"></i>
+        <span class="weather">
+            Snowing
+      </div>
+      <div class="col">
+          <span class="Days">
+        Wednesday
+      </span>
+      </br>
+      <i class="fa-solid fa-cloud-rain fa-2xl"></i>
+      <span class="weather">
+          Heavy Rainfall
+      </div>
+      <div class="col">
+          <span class="Days">
+          Thursday
+        </span>
+      </br>
+      <i class="fa-solid fa-cloud-sun-rain fa-2xl"></i>
+      <span class="weather">
+          Sunny with light showers
+        </div>
+        <div class="col">
+            <span class="Days">
+            Friday
+          </span>
+        </br>
+        <i class="fa-solid fa-sun fa-2xl"></i>
+        <span class="weather">
+            Sunny
+          </div>
+          <div class="col">
+              <span class="Days">
+              Saturday
+            </span>
+            </br>
+            <i class="fa-solid fa-sun fa-2xl"></i>
+          <span class="weather">
+          Sunny
+          </span>
+            </div>
+    </div>
+    
+  </div>
+  </body>
+  <script src="src/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2a66aa5053.js" crossorigin="anonymous"></script>
+</html>
