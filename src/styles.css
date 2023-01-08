@@ -54,21 +54,18 @@ link body {
     font-weight: bold;
     left: 10px;
   }
-  
+ 
   .degrees {
     font-size: 1.5vw;
     position: relative;
     padding: 10px;
-    display: inline;
   }
   
-  .celsius {
+ .celsius {
     text-decoration: none;
     color: black;
-    display: inline;
     text-shadow: -1px 0 rgb(87 86 86 / 20%), 0 1px rgb(87 86 86 / 20%),
       1px 0 rgb(87 86 86 / 20%), 0 -1px rgb(87 86 86 / 20%);
-    hover: ;
   }
   .fahrenheit {
     font-size: 1.5vw;
@@ -77,13 +74,19 @@ link body {
     background-color: blue;
     opacity: 0.7;
     text-decoration: none;
-    display: inline;
     text-shadow: -1px 0 rgb(143 139 139 / 20%), 0 1px rgb(143 139 139 / 20%),
       0 -1px rgb(143 139 139 / 20%);
+
   }
   
   .fahrenheit:hover {
-    color: yellow;
+    color: blue;
+    background-color:white
+  }
+
+  .celsius:hover {
+    color: white;
+    background-color:#4D4DFF;
   }
   .col-4 {
     flex: 0 0 auto;
