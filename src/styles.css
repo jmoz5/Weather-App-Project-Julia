@@ -11,6 +11,7 @@ link body {
       font-size: 50px;
     }
   }
+  
   h1,
   h2 {
     text-align: left;
@@ -29,7 +30,7 @@ link body {
     color: #8064e9;
     font-size: 15px;
   }
-  
+
   .temperature {
     position: relative;
     left: 50px;
@@ -39,6 +40,8 @@ link body {
     font-family: PT Mono, monospace;
   }
   
+
+
   .description {
     text-align: left;
     font-size: 15px;
@@ -49,18 +52,31 @@ link body {
   .btn#currentSpot{
     background-color: #8064e9;
   }
+
+ 
   btn {
     padding: 5px;
     font-weight: bold;
     left: 10px;
   }
- 
+
+
+  a:link {
+    color: white;
+    text-decoration: none;
+    
+}
+  
   .degrees {
     font-size: 1.5vw;
     position: relative;
     padding: 10px;
   }
-  
+
+
+
+
+
  .celsius {
     text-decoration: none;
     color: black;
@@ -76,6 +92,8 @@ link body {
     1px 0 rgb(87 86 86 / 20%), 0 -1px rgb(87 86 86 / 20%);
 
   }
+
+
   
   .fahrenheit:hover,.celsius:hover {
     color: white;

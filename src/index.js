@@ -42,6 +42,8 @@ function DateFormat() {
   let updateTime = document.querySelector("#datetime");
   updateTime.innerHTML = `${DateFormat()}`;
   
+  let celsiusTemperature =null;
+
   //get city name
   let city = document.querySelector("#search-form");
   city.addEventListener("submit", cityName);
@@ -78,17 +80,20 @@ function DateFormat() {
   //click button "current"
   let currentButton = document.querySelector("#currentSpot");
   currentButton.addEventListener("click", getCurrentLocation);
+
   
+
   // show temperature of city
   function showTemperature(response) {
-    let CityTemperature = Math.round(response.data.main.temp);
+    celsiusTemperature = Math.round(response.data.main.temp);
+    let CityTemperature = Math.round(celsiusTemperature);
     console.log(CityTemperature);
     let todayTemp = document.querySelector("#current-temp");
     todayTemp.innerHTML = `${CityTemperature}°`;
     let city = document.querySelector("#city");
     city.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
     document.querySelector(".description").innerHTML =
-      response.data.weather[0].description;
+    response.data.weather[0].description;
   }
   
   //show current city name
@@ -97,4 +102,32 @@ function DateFormat() {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(showTemperature);
   }
-  
+
+  handleCity("Berlin");
+
+  //Calculate Fahrenheit temperature
+  function showFahrenheitTemperature(event){
+    event.preventDefault();
+    let fahrenheitTemperature=Math.round((celsiusTemperature*9)/5+32);
+    let temperatureElement=document.querySelector("#current-temp");
+    temperatureElement.innerHTML =(`${fahrenheitTemperature}°`);
+  }
+
+    //Show celsius temperature
+    function showCelsiusTemperature(event){
+      event.preventDefault();
+      let temperatureElement=document.querySelector("#current-temp");
+      temperatureElement.innerHTML=`${celsiusTemperature}°`;
+    }
+
+
+ //When Fahrenheit button clicked,  Fahrenheit value shown
+  let fahrenheitLink = document.querySelector(".fahrenheit");
+  fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+   //When Celsius button clicked,  Fahrenheit value shown
+   let celsiusLink = document.querySelector(".celsius");
+   celsiusLink.addEventListener("click", showCelsiusTemperature);
+ 
+
+ 
