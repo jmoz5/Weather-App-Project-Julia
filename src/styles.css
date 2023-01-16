@@ -67,8 +67,8 @@ link body {
   }
 
 
+
   a:link {
-    color: white;
     text-decoration: none;
     
 }
@@ -82,7 +82,7 @@ link body {
 
   .fahrenheit:hover,.celsius:hover {
     color: white;
-    background-color:#4D4DFF;
+    background-color:lightsteelblue;
   }
 
 
