@@ -81,6 +81,7 @@ function DateFormat() {
   let currentButton = document.querySelector("#currentSpot");
   currentButton.addEventListener("click", getCurrentLocation);
 
+  let iconElement=document.querySelector("#icon");
   
 
   // show temperature of city
@@ -94,8 +95,10 @@ function DateFormat() {
     city.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
     document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
+    iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
   }
-  
+
   //show current city name
   function showLocation(city) {
     let apiKey = "4c9b53e4f8f5eb00df5915bdca340605";
