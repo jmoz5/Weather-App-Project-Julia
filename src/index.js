@@ -88,15 +88,14 @@ function DateFormat() {
   function showTemperature(response) {
     celsiusTemperature = Math.round(response.data.main.temp);
     let CityTemperature = Math.round(celsiusTemperature);
-    console.log(CityTemperature);
     let todayTemp = document.querySelector("#current-temp");
     todayTemp.innerHTML = `${CityTemperature}°`;
     let city = document.querySelector("#city");
     city.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
-    document.querySelector(".description").innerHTML =
-    response.data.weather[0].description;
+    document.querySelector(".description").innerHTML = response.data.weather[0].description;
     iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
+    document.querySelector("#windspeed").innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
+    document.querySelector("#feels-like").innerHTML = `${Math.round(response.data.main.feels_like)}ºC `;
   }
 
   //show current city name
