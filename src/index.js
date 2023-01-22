@@ -83,6 +83,34 @@ function DateFormat() {
 
   let iconElement=document.querySelector("#icon");
   
+  function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+    let days = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
+    let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+     `<div class="col">
+          <div class="Days">
+        ${day} 
+          </div>
+      <img src="http://openweathermap.org/img/wn/10d@2x.png"
+      alt=""
+      width="100"
+      />
+      <div class="weather-forecast-temperatures">
+        <br>
+      0°
+      </div>
+      <span class="weather">
+          Snowing
+      </div>`;
+    });
+
+    forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
 
   // show temperature of city
   function showTemperature(response) {
@@ -96,6 +124,7 @@ function DateFormat() {
     iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     document.querySelector("#windspeed").innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
     document.querySelector("#feels-like").innerHTML = `${Math.round(response.data.main.feels_like)}ºC `;
+    displayForecast();
   }
 
   //show current city name
@@ -130,6 +159,3 @@ function DateFormat() {
    //When Celsius button clicked,  Fahrenheit value shown
    let celsiusLink = document.querySelector(".celsius");
    celsiusLink.addEventListener("click", showCelsiusTemperature);
- 
-
- 

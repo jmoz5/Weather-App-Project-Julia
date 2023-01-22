@@ -130,7 +130,7 @@ link body {
     font-size: 20px;
     font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
   }
-  .Days {
+  .Days,.weather-forecast-temperatures {
     color: #8064e9;
     font-weight: bold;
     font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
