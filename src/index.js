@@ -105,9 +105,7 @@ function DateFormat() {
     forecastHTML =
       forecastHTML +
      `<div class="col">
-       <div class="Days">${formatDay
-      (forecastDay.dt)}
-          </div>
+     <div class="Days">${formatDay(forecastDay.dt)}</div>
       <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
       alt=""
       width="100"
@@ -115,21 +113,18 @@ function DateFormat() {
       <div class="weather-forecast-temperatures">
         <br>
       ${Math.round(forecastDay.temp.min)}° / ${math.round(forecastDay.temp.max)}°;
-      </div>
       <div class="weather">
           Snowing
-      </div>
       </div>`;
     });
 
     forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 function getForecast(coordinates){
   let apiKey = "4c9b53e4f8f5eb00df5915bdca340605";
-  let apiUrlforecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrlforecast).then(displayForecast);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
   // show temperature of city
