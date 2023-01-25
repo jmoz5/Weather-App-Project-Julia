@@ -29,7 +29,6 @@ function DateFormat() {
     ];
   
     let date = realTime.getDate();
-    let year = realTime.getFullYear();
     let day = days[realTime.getDay()];
     let month = months[realTime.getMonth()];
     let hour = realTime.getHours();
@@ -37,7 +36,7 @@ function DateFormat() {
     let minute = realTime.getMinutes();
     minute = minute < 10 ? "0" + minute : minute;
   
-    let time = `${day}, ${month} ${date}, ${year} ${hour}:${minute}`;
+    let time = `${day}, ${month} ${date}, ${hour}:${minute}`;
     return time;
   }
   
